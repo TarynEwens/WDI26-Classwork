@@ -1,0 +1,42 @@
+/* selector {
+  property: value;
+  otherProperty: other value;
+} */
+
+body {
+  background-color: pink;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  background-color: rgba(255,255,255,0.5);
+  text-decoration: underline;
+  text-align: center;
+}
+
+h1 {
+  padding: 2em;
+  margin: 2em;
+}
+
+p {
+  font-style: italic;
+}
+
+img {
+  width: 100%;
+  /* height: auto; */
+  margin: auto;
+}
+
+.fancy {
+  color: gray;
+  font-style: normal;
+  font-size: 130%;
+}
+
+.rockyroad {
+  width: 50%;
+  margin: 2em auto;
+}

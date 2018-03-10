@@ -1,0 +1,41 @@
+// jQuery and DOM free zone
+
+const accounts = {
+  checkingBalance: 0,
+  savingsBalance: 0,
+
+  total: function() {
+    return this.savingsBalance + this.checkingBalance;
+  },
+
+  checkingDeposit: function( amount ) {
+    this.checkingBalance += +amount;
+  },
+
+  checkingWithdraw: function( amount ) {
+    amount = +amount;
+    if (amount <= this.checkingBalance) {
+      this.checkingBalance -= amount;
+    } else if (amount <= this.total()) {
+      const difference = amount - this.checkingBalance;
+      this.checkingBalance = 0;
+      this.savingsBalance -= difference;
+    }
+  },
+
+  savingsDeposit: function( amount ) {
+    this.savingsBalance += +amount;
+  },
+
+  savingsWithdraw: function( amount ) {
+    amount = +amount;
+    if (amount <= this.savingsBalance) {
+      this.savingsBalance -= amount;
+    } else if (amount <= this.total()) {
+      const difference = amount - this.savingsBalance;
+      this.savingsBalance = 0;
+      this.checkingBalance -= difference;
+    }
+  },
+
+}

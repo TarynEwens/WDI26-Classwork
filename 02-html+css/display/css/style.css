@@ -1,0 +1,48 @@
+body {
+  background-color: pink;
+}
+
+.box {
+  width: 300px;
+  height: 300px;
+  border: 1px solid #000;
+  text-align: center; /* horizontal centering */
+  line-height: 300px; /* sneaky way of doing vertical centering but only for one line */
+}
+
+.block {
+display: block;
+}
+
+.inline {
+display: inline;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.none {
+  display: none;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+/* Descendent selector */
+.spooky span {
+  color: black;
+  visibility: hidden;
+}
+
+.spooky:hover {
+  /* transition: 2s all; */
+  background-color: black;
+}
+
+.spooky:hover span {
+  transition: 2s all;
+  color: yellow;
+  visibility: visible;
+}
